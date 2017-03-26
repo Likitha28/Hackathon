@@ -27,7 +27,7 @@ public class Addactivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
-
+        //Manish was here
         final Button button1 = (Button) findViewById(R.id.button1);
         final EditText e1 = (EditText) findViewById(R.id.editText18) ;
         button1.setOnClickListener(new View.OnClickListener() {
