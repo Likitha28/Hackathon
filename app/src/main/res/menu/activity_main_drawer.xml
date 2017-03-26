@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_request"
+            android:title="New Request" />
+        <item
+            android:title="Track product"
+            android:id="@+id/nav_track" />
+        <item
+            android:id="@+id/nav_hazards"
+            android:title="Hazards" />
+        <item
+            android:id="@+id/nav_learn"
+            android:title="Learn" />
+        <item
+            android:id="@+id/nav_notification"
+            android:title="Notifications" />
+        <item
+            android:id="@+id/nav_profile"
+            android:title="My Profile" />
+        <item
+            android:id="@+id/nav_help"
+            android:title="Help Center" />
+        <item
+            android:id="@+id/nav_legal"
+            android:title="Legal" />
+    </group>
+
+    <item android:title="Communication"
+        android:id="@+id/nav_communication">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+        </menu>
+    </item>
+
+</menu>
