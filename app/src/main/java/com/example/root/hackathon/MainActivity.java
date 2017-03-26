@@ -106,6 +106,11 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_hazards) {
+            Intent i2=new Intent(getBaseContext(),Hazard.class);
+            startActivity(i2);
+
+
+
 
         } else if (id == R.id.nav_learn) {
 

@@ -52,6 +52,14 @@
         <activity
             android:name=".Detailed_tracking"
             android:label="@string/title_activity_detailed_tracking"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Hazard"
+            android:label="@string/title_activity_hazard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Result"
+            android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

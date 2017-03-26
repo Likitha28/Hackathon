@@ -26,4 +26,6 @@
     <string name="title_activity_view_item">ViewItem</string>
     <string name="title_activity_track">Track</string>
     <string name="title_activity_detailed_tracking">Detailed_tracking</string>
+    <string name="title_activity_hazard">Hazard</string>
+    <string name="title_activity_result">Result</string>
 </resources>
