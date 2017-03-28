@@ -60,6 +60,14 @@
         <activity
             android:name=".Result"
             android:label="@string/title_activity_result"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Policies"
+            android:label="@string/title_activity_policies"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Graph"
+            android:label="@string/title_activity_graph"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

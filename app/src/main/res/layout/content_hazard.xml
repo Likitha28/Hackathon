@@ -8,11 +8,10 @@
     tools:context="com.example.root.hackathon.Hazard"
     tools:showIn="@layout/activity_hazard">
 
-
     <EditText
         android:id="@+id/edittext"
         android:layout_width="125dp"
-        android:layout_height="38dp"
+        android:layout_height="45dp"
         android:layout_above="@+id/editText2"
 
         android:layout_alignParentEnd="true"
@@ -22,7 +21,8 @@
         android:inputType="number"
         android:text="0"
         tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="75dp" />
+        tools:layout_editor_absoluteY="75dp"
+        />
 
     <EditText
         android:id="@+id/editText2"
@@ -50,7 +50,9 @@
         tools:layout_editor_absoluteY="184dp"
         android:layout_above="@+id/editText4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
 
     <EditText
         android:id="@+id/editText4"
@@ -64,7 +66,9 @@
         tools:layout_editor_absoluteY="244dp"
         android:layout_centerVertical="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3" />
 
     <EditText
         android:id="@+id/editText5"
@@ -77,11 +81,13 @@
         tools:layout_editor_absoluteY="297dp"
         android:layout_below="@+id/editText4"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView4"
+        android:layout_toEndOf="@+id/textView4" />
 
     <EditText
         android:id="@+id/editText6"
-        android:layout_width="125dp"
+        android:layout_width="match_parent"
         android:layout_height="45dp"
         android:ems="10"
         android:hint="Total Imaging Devices"
@@ -91,13 +97,15 @@
         tools:layout_editor_absoluteY="297dp"
         android:layout_below="@+id/editText5"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView6"
+        android:layout_toEndOf="@+id/textView6" />
 
 
     <EditText
         android:id="@+id/editText7"
-        android:layout_width="125dp"
-        android:layout_height="45dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
         android:ems="10"
         android:hint="Others"
@@ -107,113 +115,138 @@
         tools:layout_editor_absoluteY="297dp"
         android:layout_above="@+id/button1"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/textView8"
+        android:layout_toEndOf="@+id/textView8" />
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
         android:textColor="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:text="Calculate Hazards"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/editText2"
-        android:text="Total Laptops"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView10"
+        android:layout_alignTop="@+id/edittext"
         android:layout_toLeftOf="@+id/edittext"
-        android:layout_toStartOf="@+id/edittext" />
+        android:layout_toStartOf="@+id/edittext"
+        android:text="Laptops"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editText3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView"
-        android:text="Total CRTs"
-        android:layout_above="@+id/editText3"
         android:layout_toLeftOf="@+id/edittext"
-        android:layout_toStartOf="@+id/edittext" />
+        android:layout_toStartOf="@+id/edittext"
+        android:text="CRTs"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_above="@+id/editText4"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView2"
         android:layout_toLeftOf="@+id/editText2"
         android:layout_toStartOf="@+id/editText2"
-        android:text="Total Desktops nd Servers" />
+        android:text="Desktops /Servers"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Flat Panel Displays"
-        android:layout_below="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editText5"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/editText5"
+        android:layout_below="@+id/textView3"
         android:layout_toLeftOf="@+id/editText3"
-        android:layout_toStartOf="@+id/editText3" />
+        android:layout_toStartOf="@+id/editText3"
+        android:text=" Flat Panel Displays"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Total Mobile Phones"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/editText6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/editText4"
-        android:layout_above="@+id/editText6"
         android:layout_toLeftOf="@+id/editText4"
-        android:layout_toStartOf="@+id/editText4" />
+        android:layout_toStartOf="@+id/editText4"
+        android:text=" Mobile Phones"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignBottom="@+id/editText6"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText5"
         android:layout_toLeftOf="@+id/editText5"
         android:layout_toStartOf="@+id/editText5"
-        android:text="Total Imaging Devices"
-        android:layout_below="@+id/editText5"
-        android:layout_above="@+id/editText7" />
+        android:text=" Imaging Devices"
+        android:textSize="18dp" />
 
     <TextView
         android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:textSize="18dp"
         android:layout_below="@+id/textView8"
-        android:layout_toLeftOf="@+id/editText6"
         android:layout_toStartOf="@+id/editText6"
-        android:text="Other (mouse, lan cards,Keyboard,etc)" />
+        android:text="Other (mouse, lan cards,Keyboard,etc)"
+        android:layout_alignBottom="@+id/editText7"
+        android:layout_toLeftOf="@+id/editText6" />
 
     <TextView
         android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
         android:textAlignment="center"
-        android:layout_above="@+id/edittext"
-        android:text=" Evaluation of Health Hazards   "
+        android:text=" Evaluation of Health Hazards "
+        android:textStyle="bold"
+        android:textSize="22dp"
         android:textColor="@color/colorAccent1"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <TextView
+        android:id="@+id/textView41"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/edittext"
+        android:text="Enter Count of Devices:"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textSize="20dp"
+        android:textColor="@color/colorPrimary"
         android:layout_alignParentEnd="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView10" />
 
 </RelativeLayout>

@@ -113,8 +113,16 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_learn) {
+            Intent intent5=new Intent(getApplicationContext(),Graph.class);
+            startActivity(intent5);
 
-        } else if (id == R.id.nav_share) {
+        }
+        else if (id == R.id.nav_legal) {
+Intent i3=new Intent(getBaseContext(),Policies.class);
+            startActivity(i3);
+        }
+
+        else if (id == R.id.nav_share) {
 
         } else if (id == R.id.nav_send) {
 

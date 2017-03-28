@@ -28,4 +28,7 @@
     <string name="title_activity_detailed_tracking">Detailed_tracking</string>
     <string name="title_activity_hazard">Hazard</string>
     <string name="title_activity_result">Result</string>
+    <string name="title_activity_legal">Legal</string>
+    <string name="title_activity_policies">Policies</string>
+    <string name="title_activity_graph">Graph</string>
 </resources>

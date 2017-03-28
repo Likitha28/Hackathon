@@ -13,9 +13,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.github.mikephil.charting.charts.PieChart;
+
 public class Hazard extends AppCompatActivity {
 
-    @Override
+
     protected void onCreate(Bundle savedInstanceState)
 
     {
@@ -102,11 +104,31 @@ public class Hazard extends AppCompatActivity {
                 String s9=String.format("%.3f",d13);
                 String s10=String.format("%.3f",d14);
 
-                String result = "\n Green house gases :"+s1+ "kgs\n"+" \n Aliminium Amount :" + s2+"kgs\n" +"\n Arsenic Amount : "+s3+ "kgs\n"+" \n Cadmium Amount: "+s4+  "kgs\n"+"\n Copper Amount : " +s5+" kgs\n"+"\n Gold Amount: "+s6+  "kgs\n"+"\n Lead Amount:  "+s7+ "kgs\n"+"\n Mercury Amount:  "+s8+  "kgs\n"+"\n Palladium Amount: " +s9+  "kgs\n"+"\n Platinium Amount: " +s10+"kgs\n"+"\nSteel Amount"+s+"kgs\n";
 
-                Intent i = new Intent(getApplicationContext(), Result.class);
+               // String result = "\n Green house gases :"+s1+ "kgs\n"+" \n Aliminium Amount :" + s2+"kgs\n" +"\n Arsenic Amount : "+s3+ "kgs\n"+" \n Cadmium Amount: "+s4+  "kgs\n"+"\n Copper Amount : " +s5+" kgs\n"+"\n Gold Amount: "+s6+  "kgs\n"+"\n Lead Amount:  "+s7+ "kgs\n"+"\n Mercury Amount:  "+s8+  "kgs\n"+"\n Palladium Amount: " +s9+  "kgs\n"+"\n Platinium Amount: " +s10+"kgs\n"+"\nSteel Amount"+s+"kgs\n";
+
+Intent i =new Intent(getApplicationContext(),Graph.class);
+                i.putExtra("s",s);
+                i.putExtra("s1",s1);
+                i.putExtra("s2",s2);
+                i.putExtra("s3",s3);
+                i.putExtra("s4",s4);
+                i.putExtra("s5",s5);
+                i.putExtra("s6",s6);
+                i.putExtra("s7",s7);
+                i.putExtra("s8",s8);
+                i.putExtra("s9",s9);
+                i.putExtra("s10",s10);
+                startActivity(i);
+
+
+
+
+
+             /*   Intent i = new Intent(getApplicationContext(), Result.class);
                 i.putExtra("result", result);
                 startActivity(i);
+                */
             }
         });
 
