@@ -61,6 +61,17 @@
             android:name=".Result"
             android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar" />
+<<<<<<< HEAD
+=======
+        <activity
+            android:name=".Policies"
+            android:label="@string/title_activity_policies"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Graph"
+            android:label="@string/title_activity_graph"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+>>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
     </application>
 
 </manifest>
