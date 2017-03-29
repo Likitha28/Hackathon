@@ -35,7 +35,7 @@ public class Track extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+                //finish();
 
 
             }

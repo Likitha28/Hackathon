@@ -23,7 +23,7 @@ public class Complete_profile extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+                //finish();
 
 
 

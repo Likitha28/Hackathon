@@ -6,8 +6,12 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
@@ -27,7 +31,36 @@ public class Register extends AppCompatActivity {
             }
         });
 
+        EditText ed1;
+        ed1 = (EditText)findViewById(R.id.editText4 );
 
+        final String email = ed1.getText().toString().trim();
+
+        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+
+        ed1 .addTextChangedListener(new TextWatcher() {
+            public void afterTextChanged(Editable s) {
+
+                if (email.matches(emailPattern) && s.length() > 0)
+                {
+                    Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
+                    // or
+                    // textView.setText("valid email");
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
+                    //or
+                    // textView.setText("invalid email");
+                }
+            }
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+                // other stuffs
+            }
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // other stuffs
+            }
+        });
 
 
 
@@ -39,7 +72,7 @@ public class Register extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+               // finish();
 
 
 

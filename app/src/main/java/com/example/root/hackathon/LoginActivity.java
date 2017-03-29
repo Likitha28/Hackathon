@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -37,6 +39,12 @@ public class LoginActivity extends AppCompatActivity {
        // tx1.setVisibility(View.GONE);
 
        // tx1.setVisibility(View.GONE);
+
+
+       // final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
+
+       // final TextView textView = (TextView)findViewById(R.id.text);
+
 
 
         b1.setOnClickListener(new View.OnClickListener() {

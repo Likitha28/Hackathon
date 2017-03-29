@@ -28,4 +28,5 @@
     <string name="title_activity_detailed_tracking">Detailed_tracking</string>
     <string name="title_activity_hazard">Hazard</string>
     <string name="title_activity_result">Result</string>
+    <string name="title_activity_add_new">AddActivityNew</string>
 </resources>

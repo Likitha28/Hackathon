@@ -22,7 +22,7 @@ public class Success_registeration extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+                //finish();
 
 
 
