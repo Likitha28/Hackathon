@@ -61,8 +61,6 @@
             android:name=".Result"
             android:label="@string/title_activity_result"
             android:theme="@style/AppTheme.NoActionBar" />
-<<<<<<< HEAD
-=======
         <activity
             android:name=".Policies"
             android:label="@string/title_activity_policies"
@@ -70,8 +68,17 @@
         <activity
             android:name=".Graph"
             android:label="@string/title_activity_graph"
+            android:theme="@style/AppTheme.NoActionBar" />
+        >>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
+        <activity android:name=".AddNew" />
+        <activity
+            android:name=".AddNew2"
+            android:label="@string/title_activity_add_new2"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Learn"
+            android:label="@string/title_activity_learn"
             android:theme="@style/AppTheme.NoActionBar"></activity>
->>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
     </application>
 
 </manifest>

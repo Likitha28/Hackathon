@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity
 
 
         } else if (id == R.id.nav_learn) {
-            Intent intent5=new Intent(getApplicationContext(),Graph.class);
+            Intent intent5=new Intent(getApplicationContext(),Learn.class);
             startActivity(intent5);
 
         }

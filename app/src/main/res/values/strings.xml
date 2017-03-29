@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hackathon</string>
+    <string name="app_name">Ewaste Management</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -28,11 +28,14 @@
     <string name="title_activity_detailed_tracking">Detailed_tracking</string>
     <string name="title_activity_hazard">Hazard</string>
     <string name="title_activity_result">Result</string>
-<<<<<<< HEAD
     <string name="title_activity_add_new">AddActivityNew</string>
-=======
     <string name="title_activity_legal">Legal</string>
     <string name="title_activity_policies">Policies</string>
     <string name="title_activity_graph">Graph</string>
->>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
+
+    <string name="hello">Hello World, PopUpWindowTrialActivity!</string>
+    <string name="select_string">Select an item</string>
+    <string name="title_activity_add_new2">AddNew2</string>
+    <string name="title_activity_learn">Learn</string>
+    >>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
 </resources>
