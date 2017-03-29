@@ -28,7 +28,7 @@ public class Addactivity extends AppCompatActivity {
             }
         });
         //Manish was here
-        final Button button1 = (Button) findViewById(R.id.button1);
+        final Button button1 = (Button) findViewById(R.id.login);
         final EditText e1 = (EditText) findViewById(R.id.editText18) ;
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

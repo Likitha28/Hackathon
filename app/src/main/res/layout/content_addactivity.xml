@@ -14,14 +14,14 @@
     tools:showIn="@layout/activity_addactivity">
 
     <TextView
-        android:text="REfrigerator"
+        android:id="@+id/textView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView20"
-        android:layout_marginTop="48dp"
-        android:layout_below="@+id/editText18"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editText18"
+        android:layout_marginTop="48dp"
+        android:text="Refrigerator" />
 
     <EditText
         android:layout_width="40dp"
@@ -29,7 +29,7 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText19"
-        android:layout_alignTop="@+id/textView20"
+        android:layout_alignBottom="@+id/textView20"
         android:layout_alignLeft="@+id/editText18"
         android:layout_alignStart="@+id/editText18" />
 
@@ -48,24 +48,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/textView18"
-        android:layout_below="@+id/editText19"
+        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="13dp"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="61dp" />
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="NEXT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button1"
-        android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
+        android:id="@+id/login"
         android:layout_alignParentBottom="true"
-        android:layout_toRightOf="@+id/textView19"
-        android:layout_toEndOf="@+id/textView19"
-        android:layout_marginBottom="46dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="40dp"
@@ -73,12 +66,9 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/editText18"
-        android:layout_marginRight="40dp"
-        android:layout_marginEnd="40dp"
         android:layout_alignBaseline="@+id/textView19"
         android:layout_alignBottom="@+id/textView19"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_toRightOf="@+id/textView42" />
 
     <EditText
         android:layout_width="40dp"
@@ -90,5 +80,56 @@
         android:layout_alignBottom="@+id/textView18"
         android:layout_alignLeft="@+id/editText19"
         android:layout_alignStart="@+id/editText19" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Television"
+        android:layout_below="@+id/editText20"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_alignBaseline="@+id/textView16"
+        android:layout_alignBottom="@+id/textView16"
+        android:layout_alignLeft="@+id/editText20"
+        android:layout_alignStart="@+id/editText20" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_below="@+id/editText"
+        android:layout_alignRight="@+id/editText"
+        android:layout_alignEnd="@+id/editText"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/editText5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:text="Keyboard" />
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/login"
+        android:text="Select Items" />
 
 </RelativeLayout>

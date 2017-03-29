@@ -13,7 +13,7 @@ public class profile_update extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_update);
 
-        final Button button1 = (Button) findViewById(R.id.button1);
+        final Button button1 = (Button) findViewById(R.id.login);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 

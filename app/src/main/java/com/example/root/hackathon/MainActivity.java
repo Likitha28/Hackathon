@@ -13,6 +13,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,6 +25,15 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        Intent intent = getIntent();
+        String name = intent.getStringExtra("name");
+
+        TextView name1 = (TextView) findViewById(R.id.name);
+
+        // Display user details
+        String message =  "Welcome" +"   "+ name ;
+        name1.setText(message);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -124,7 +135,14 @@ Intent i3=new Intent(getBaseContext(),Policies.class);
 
         else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        }
+        else if (id == R.id.nav_profile) {
+
+            Intent i5=new Intent(getBaseContext(),Success_registeration.class);
+            startActivity(i5);
+
+        }
+        else if (id == R.id.nav_send) {
 
         }
 
