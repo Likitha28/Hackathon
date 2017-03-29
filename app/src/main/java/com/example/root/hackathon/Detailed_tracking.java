@@ -37,7 +37,7 @@ public class Detailed_tracking extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+               // finish();
 
 
 

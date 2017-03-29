@@ -30,7 +30,7 @@ SharedPreferences sp;
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+                //finish();
 
 
 

@@ -24,7 +24,7 @@ public class Success_registeration extends AppCompatActivity {
                 Intent i1=new Intent(getBaseContext(),Complete_profile.class);
                 startActivity(i1);
                 //Remove activity
-                finish();
+                //finish();
 
             }
             // Perform action on click

@@ -36,7 +36,7 @@ public class ViewItem extends AppCompatActivity {
                 startActivity(i1);
 
                 //Remove activity
-                finish();
+                //finish();
 
 
 

@@ -34,6 +34,7 @@ public class Complete_profile extends AppCompatActivity {
             public void onClick(View v) {
 
 
+<<<<<<< HEAD
                 final String address = etaddress.getText().toString();
                 final String pincode = etpincode.getText().toString();
                 final String accountno = etaccount.getText().toString();
@@ -48,6 +49,10 @@ public class Complete_profile extends AppCompatActivity {
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
+=======
+                //Remove activity
+                //finish();
+>>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
 
                             if (success) {
 

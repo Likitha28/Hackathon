@@ -5,12 +5,20 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
 
-public class Addactivity extends AppCompatActivity {
+public class Addactivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private Spinner spinner;
+    private static final String[]paths = {"Laptop", "Computer", "Refrigerator","Mobile phones","Camera","Batteries","Answering Machines","Automotive Electronics","Lead Acid Batteries","Routers",
+            "Televisions","Servers","Scanners","Chargers","Video game systems","Printers","Keyboards","Air conditioners" };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,18 +35,25 @@ public class Addactivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+
         //Manish was here
+<<<<<<< HEAD
         final Button button1 = (Button) findViewById(R.id.login);
         final EditText e1 = (EditText) findViewById(R.id.editText18) ;
+=======
+        final Button button1 = (Button) findViewById(R.id.button1);
+        //final EditText e1 = (EditText) findViewById(R.id.editText18) ;
+>>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
                 Intent i1=new Intent(getBaseContext(),Edititem.class);
 
-                i1.putExtra ( "TextBox", e1.getText().toString() );
+              //  i1.putExtra ( "TextBox", e1.getText().toString() );
                 startActivity(i1);
                 //Remove activity
-                finish();
+                //finish();
 
 
 
@@ -46,6 +61,48 @@ public class Addactivity extends AppCompatActivity {
             }
             // Perform action on click
         });
+
+
+        spinner = (Spinner)findViewById(R.id.spinner);
+            ArrayAdapter<String>adapter = new ArrayAdapter<String>(Addactivity.this,
+                    android.R.layout.simple_spinner_item,paths);
+
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinner.setAdapter(adapter);
+            spinner.setOnItemSelectedListener(this);
+
+        }
+
+        public void onItemSelected(AdapterView<?> parent, View v, int position, long id) {
+
+            switch (position) {
+                case 0:
+                    // Whatever you want to happen when the first item gets selected
+
+
+                    String text = spinner.getSelectedItem().toString();
+                    TextView t1 = (TextView) findViewById(R.id.textView18) ;
+                    t1.setText(text);
+                    break;
+                case 1:
+                    // Whatever you want to happen when the second item gets selected
+                    String text1 = spinner.getSelectedItem().toString();
+                    t1 = (TextView) findViewById(R.id.textView18);
+                    t1.setText(text1);
+                    break;
+                case 2:
+                    // Whatever you want to happen when the thrid item gets selected
+                    break;
+
+
+        }
+
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
     }
 
 }

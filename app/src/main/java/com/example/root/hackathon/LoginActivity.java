@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,7 +44,30 @@ public class LoginActivity extends AppCompatActivity {
         final EditText etPassword = (EditText) findViewById(R.id.password);
         final Button login = (Button) findViewById(R.id.login);
 
+<<<<<<< HEAD
         login.setOnClickListener(new View.OnClickListener() {
+=======
+        b1 = (Button)findViewById(R.id.button1);
+        ed1 = (EditText)findViewById(R.id.editText13);
+        ed2 = (EditText)findViewById(R.id.editText14);
+
+
+        tx1 = (TextView)findViewById(R.id.textView16);
+        tx2 = (TextView)findViewById(R.id.textView17);
+
+       // tx1.setVisibility(View.GONE);
+
+       // tx1.setVisibility(View.GONE);
+
+
+       // final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
+
+       // final TextView textView = (TextView)findViewById(R.id.text);
+
+
+
+        b1.setOnClickListener(new View.OnClickListener() {
+>>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
             @Override
             public void onClick(View v) {
                 email = etUsername.getText().toString();
