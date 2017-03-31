@@ -38,13 +38,13 @@ public class Addactivity extends AppCompatActivity implements AdapterView.OnItem
 
 
         //Manish was here
-<<<<<<< HEAD
+
         final Button button1 = (Button) findViewById(R.id.login);
-        final EditText e1 = (EditText) findViewById(R.id.editText18) ;
-=======
-        final Button button1 = (Button) findViewById(R.id.button1);
         //final EditText e1 = (EditText) findViewById(R.id.editText18) ;
->>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
+
+      //  final Button button1 = (Button) findViewById(R.id.button1);
+        //final EditText e1 = (EditText) findViewById(R.id.editText18) ;
+
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
@@ -63,7 +63,7 @@ public class Addactivity extends AppCompatActivity implements AdapterView.OnItem
         });
 
 
-        spinner = (Spinner)findViewById(R.id.spinner);
+      //  spinner = (Spinner)findViewById(R.id.spinner);
             ArrayAdapter<String>adapter = new ArrayAdapter<String>(Addactivity.this,
                     android.R.layout.simple_spinner_item,paths);
 
@@ -81,14 +81,14 @@ public class Addactivity extends AppCompatActivity implements AdapterView.OnItem
 
 
                     String text = spinner.getSelectedItem().toString();
-                    TextView t1 = (TextView) findViewById(R.id.textView18) ;
-                    t1.setText(text);
+             //       TextView t1 = (TextView) findViewById(R.id.textView18) ;
+                   // t1.setText(text);
                     break;
                 case 1:
                     // Whatever you want to happen when the second item gets selected
                     String text1 = spinner.getSelectedItem().toString();
-                    t1 = (TextView) findViewById(R.id.textView18);
-                    t1.setText(text1);
+               //     t1 = (TextView) findViewById(R.id.textView18);
+                    //t1.setText(text1);
                     break;
                 case 2:
                     // Whatever you want to happen when the thrid item gets selected

@@ -20,7 +20,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
@@ -39,36 +38,22 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
+        sp = getSharedPreferences("login", MODE_PRIVATE);
         final EditText etUsername = (EditText) findViewById(R.id.email);
         final EditText etPassword = (EditText) findViewById(R.id.password);
         final Button login = (Button) findViewById(R.id.login);
 
-<<<<<<< HEAD
-        login.setOnClickListener(new View.OnClickListener() {
-=======
-        b1 = (Button)findViewById(R.id.button1);
-        ed1 = (EditText)findViewById(R.id.editText13);
-        ed2 = (EditText)findViewById(R.id.editText14);
-
-
-        tx1 = (TextView)findViewById(R.id.textView16);
-        tx2 = (TextView)findViewById(R.id.textView17);
 
        // tx1.setVisibility(View.GONE);
 
        // tx1.setVisibility(View.GONE);
-
-
        // final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
 
        // final TextView textView = (TextView)findViewById(R.id.text);
 
+        login.setOnClickListener(new View.OnClickListener() {
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
->>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
-            @Override
             public void onClick(View v) {
                 email = etUsername.getText().toString();
                 password = etPassword.getText().toString();
@@ -105,8 +90,6 @@ public class LoginActivity extends AppCompatActivity {
                         }
                     }
                 };
-
-
                 LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
@@ -115,8 +98,8 @@ public class LoginActivity extends AppCompatActivity {
         });
     }
         void loginCheck(int user_id){
-
                 SharedPreferences.Editor e=sp.edit();
+
                 e.putInt("user_id",user_id);
                 e.commit();
         }

@@ -2,6 +2,7 @@ package com.example.root.hackathon;
 
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,11 +17,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 public class Complete_profile extends AppCompatActivity {
-
+    SharedPreferences sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_complete_profile);
+        sp = getSharedPreferences("login", MODE_PRIVATE);
+
         final EditText etaddress = (EditText) findViewById(R.id.editText2);
         final EditText etpincode = (EditText) findViewById(R.id.editText3);
         final EditText etaccount = (EditText) findViewById(R.id.editText8);
@@ -28,20 +31,16 @@ public class Complete_profile extends AppCompatActivity {
         final EditText etbankname = (EditText) findViewById(R.id.editText10);
         final EditText etacountholdername = (EditText) findViewById(R.id.editText12);
 
-
-        final Button button1 = (Button) findViewById(R.id.login);
+        final Button button1 = (Button) findViewById(R.id.save);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-
-
-<<<<<<< HEAD
                 final String address = etaddress.getText().toString();
                 final String pincode = etpincode.getText().toString();
                 final String accountno = etaccount.getText().toString();
                 final String ifsc = etifsc.getText().toString();
                 final String bankname = etbankname.getText().toString();
                 final String accountholder = etacountholdername.getText().toString();
-
+                int user_id= sp.getInt("user_id",0);
                 // Response received from the server
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -49,20 +48,19 @@ public class Complete_profile extends AppCompatActivity {
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
-=======
                 //Remove activity
                 //finish();
->>>>>>> df1a20c0293db8151dda44dde33e7bac1a39a8ce
+
 
                             if (success) {
 
                                 //  int user_id=jsonResponse.getInt("user_id");
-                                int user_id = jsonResponse.getInt("user_id");
-                                String name = jsonResponse.getString("name");
+                              //  int user_id = jsonResponse.getInt("user_id");
+                                //String name = jsonResponse.getString("name");
                                 // int age = jsonResponse.getInt("age");
 
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                intent.putExtra("name", name);
+                                //intent.putExtra("name", name);
                                 startActivity(intent);
 
                                 //LoginActivity.this.startActivity(intent);
@@ -80,7 +78,7 @@ public class Complete_profile extends AppCompatActivity {
                     }
                 };
 
-                Complete_ProfileRequest loginRequest = new Complete_ProfileRequest(address, pincode,bankname,accountno,accountholder,ifsc ,responseListener);
+                Complete_ProfileRequest loginRequest = new Complete_ProfileRequest(user_id ,address, pincode,bankname,accountno,accountholder,ifsc ,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(Complete_profile.this);
                 queue.add(loginRequest);
             }

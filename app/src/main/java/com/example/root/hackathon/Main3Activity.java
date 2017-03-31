@@ -18,10 +18,6 @@ SharedPreferences sp;
             startActivity(new Intent(getApplicationContext(), MainActivity.class));
             finish();   //finish current activity
         }
-
-
-
-
         final Button button1 = (Button) findViewById(R.id.register);
         button1.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

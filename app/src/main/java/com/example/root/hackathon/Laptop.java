@@ -53,7 +53,6 @@ public class Laptop
         this.aluminumAmount = (0.512D * d);
         this.steelAmount = (0.871D * d);
     }
-
     public void calculatebyComponentCount(double paramDouble)
     {
         this.greenHouseGasesAmount = (2.99364E-5D * (paramDouble / 3.779D) * 10195.87D);
