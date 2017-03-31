@@ -1,7 +1,7 @@
 package com.example.root.hackathon;
 
 import android.content.Intent;
-import android.graphics.Color;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -12,88 +12,95 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import android.app.AlertDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import static com.example.root.hackathon.R.id.email;
+
 public class LoginActivity extends AppCompatActivity {
 
-
-    Button b1;
-    EditText ed1,ed2;
-
-    TextView tx1,tx2;
-    int counter = 3;
-
-
+    SharedPreferences sp;
+    String email;
+    String password;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sp = getSharedPreferences("login", MODE_PRIVATE);
+        final EditText etUsername = (EditText) findViewById(R.id.email);
+        final EditText etPassword = (EditText) findViewById(R.id.password);
+        final Button login = (Button) findViewById(R.id.login);
 
-
-        b1 = (Button)findViewById(R.id.button1);
-        ed1 = (EditText)findViewById(R.id.editText13);
-        ed2 = (EditText)findViewById(R.id.editText14);
-
-
-        tx1 = (TextView)findViewById(R.id.textView16);
-        tx2 = (TextView)findViewById(R.id.textView17);
 
        // tx1.setVisibility(View.GONE);
 
        // tx1.setVisibility(View.GONE);
-
-
        // final EditText emailValidate = (EditText)findViewById(R.id.textMessage);
 
        // final TextView textView = (TextView)findViewById(R.id.text);
 
+        login.setOnClickListener(new View.OnClickListener() {
 
 
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
             public void onClick(View v) {
-                if(ed1.getText().toString().equals("admin") &&
-                        ed2.getText().toString().equals("admin")) {
-                    Toast.makeText(getApplicationContext(),
-                            "Redirecting...",Toast.LENGTH_SHORT).show();
+                email = etUsername.getText().toString();
+                password = etPassword.getText().toString();
 
+                // Response received from the server
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonResponse = new JSONObject(response);
+                            boolean success = jsonResponse.getBoolean("success");
 
-                    Intent i1=new Intent(getBaseContext(),MainActivity.class);
-                    startActivity(i1);
+                            if (success) {
+                                //  int user_id=jsonResponse.getInt("user_id");
+                                int user_id = jsonResponse.getInt("user_id");
+                                String name = jsonResponse.getString("name");
 
-                    //Remove activity
-                    finish();
+                                loginCheck(user_id);
+                                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                intent.putExtra("name", name);
+                                startActivity(intent);
 
-                }else{
-                    Toast.makeText(getApplicationContext(), "Wrong Credentials",Toast.LENGTH_SHORT).show();
+                                //LoginActivity.this.startActivity(intent);
+                            } else {
+                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                                builder.setMessage("Login Failed")
+                                        .setNegativeButton("Retry", null)
+                                        .create()
+                                        .show();
+                            }
 
-                    tx1.setVisibility(View.VISIBLE);
-                    tx1.setBackgroundColor(Color.RED);
-                    counter--;
-                    tx1.setText(Integer.toString(counter));
-
-                    if (counter == 0) {
-                        b1.setEnabled(false);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
                     }
-
-
-
-
-
-
-                }
+                };
+                LoginRequest loginRequest = new LoginRequest(email, password, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
+                queue.add(loginRequest);
             }
 
-
-
         });
-
-
-
-
-
-
-
-
-
-
     }
-}
+        void loginCheck(int user_id){
+                SharedPreferences.Editor e=sp.edit();
+
+                e.putInt("user_id",user_id);
+                e.commit();
+        }
+    }

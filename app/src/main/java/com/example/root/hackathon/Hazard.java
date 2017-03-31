@@ -2,18 +2,13 @@ package com.example.root.hackathon;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import com.github.mikephil.charting.charts.PieChart;
 
 public class Hazard extends AppCompatActivity {
 
@@ -43,11 +38,11 @@ public class Hazard extends AppCompatActivity {
         et2=(EditText) findViewById(R.id.editText2);
         et3=(EditText) findViewById(R.id.editText3);
         et4=(EditText) findViewById(R.id.editText4);
-        et5=(EditText) findViewById(R.id.editText5);
-        et6=(EditText) findViewById(R.id.editText6);
+        et5=(EditText) findViewById(R.id.mobile);
+        et6=(EditText) findViewById(R.id.password);
         et7=(EditText) findViewById(R.id.editText7);
         //tv1=(TextView) findViewById(R.id.tv);
-        button=(Button )findViewById(R.id.button1);
+        button=(Button )findViewById(R.id.login);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
