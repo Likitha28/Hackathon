@@ -14,11 +14,18 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-
+    EditText edtFirst,edtPhone, edtPass, edtConfPass, edtEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+        edtFirst=(EditText)findViewById(R.id.editText);
+        edtPhone=(EditText)findViewById(R.id.editText5);
+        edtPass=(EditText)findViewById(R.id.editText6);
+        edtConfPass=(EditText)findViewById(R.id.editText7);
+        edtEmail=(EditText)findViewById(R.id.editText4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -31,58 +38,88 @@ public class Register extends AppCompatActivity {
             }
         });
 
-        EditText ed1;
-        ed1 = (EditText)findViewById(R.id.editText4 );
-
-        final String email = ed1.getText().toString().trim();
-
-        final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-
-        ed1 .addTextChangedListener(new TextWatcher() {
-            public void afterTextChanged(Editable s) {
-
-                if (email.matches(emailPattern) && s.length() > 0)
-                {
-                    Toast.makeText(getApplicationContext(),"valid email address",Toast.LENGTH_SHORT).show();
-                    // or
-                    // textView.setText("valid email");
-                }
-                else
-                {
-                    Toast.makeText(getApplicationContext(),"Invalid email address",Toast.LENGTH_SHORT).show();
-                    //or
-                    // textView.setText("invalid email");
-                }
-            }
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                // other stuffs
-            }
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                // other stuffs
-            }
-        });
-
 
 
         final Button button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
+                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+                if((edtFirst.getText().toString().length()==0) || (edtPhone.getText().toString().length()==0) ||
+                        (edtEmail.getText().toString().length()==0) || (edtPass.getText().toString().length()==0)
+                        || (edtConfPass.getText().toString().length()==0) )
 
+                {
+                    Toast.makeText(getApplicationContext(), "Enter all the fields", Toast.LENGTH_LONG).show();
+
+                    //edtFirst.setError("Enter all the fields ");
+                    //edtFirst.requestFocus();
+                  //  Register.this.finish();
+
+                }
+             /*   if(edtFirst.getText().toString().length()==0){
+                    edtFirst.setError("First name not entered");
+                    edtFirst.requestFocus();
+                }
+                if(edtPhone.getText().toString().length()==0){
+                    edtPhone.setError("Phone number not entered");
+                    edtPhone.requestFocus();
+                }
+                if(edtEmail.getText().toString().length()==0){
+                    edtPhone.setError("Email not entered");
+                    edtPhone.requestFocus();
+                }
+
+                if(edtPass.getText().toString().length()==0){
+                    edtPass.setError("Password not entered");
+                    edtPass.requestFocus();
+                }
+                if(edtConfPass.getText().toString().length()==0){
+                    edtConfPass.setError("Please confirm password");
+                    edtPhone.requestFocus();
+                }
+                */
+                else if(!edtEmail.getText().toString().trim().matches(emailPattern) ){
+                    edtPass.setError("Enter a valid email id");
+                    edtPass.requestFocus();
+                    // Register.this.finish();
+
+                }
+                else if(edtPhone.getText().toString().length() != 10){
+                    edtPhone.setError("Enter a valid phone number");
+                    edtPhone.requestFocus();
+                    // Register.this.finish();
+
+                }
+
+                else if(edtPass.getText().toString().length() < 8 ){
+                    edtPass.setError("Password should be atleast of 8 charactors");
+                    edtPass.requestFocus();
+                   // Register.this.finish();
+
+                }
+                else if(!edtPass.getText().toString().equals(edtConfPass.getText().toString())){
+                    edtConfPass.setError("Password Not matched");
+                    edtConfPass.requestFocus();
+                   // Register.this.finish();
+                }
+
+                else {
+                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
                 Intent i1=new Intent(getBaseContext(),Success_registeration.class);
                 startActivity(i1);
 
                 //Remove activity
-               finish();
-
-
-
+                finish();
 
             }
-            // Perform action on click
+        }
+
         });
 
 
 
     }
+
 
 }
