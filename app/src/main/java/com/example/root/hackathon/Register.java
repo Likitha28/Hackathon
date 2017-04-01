@@ -30,11 +30,11 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
 
-        edtFirst=(EditText)findViewById(R.id.editText);
-        edtPhone=(EditText)findViewById(R.id.editText5);
-        edtPass=(EditText)findViewById(R.id.editText6);
-        edtConfPass=(EditText)findViewById(R.id.editText7);
-        edtEmail=(EditText)findViewById(R.id.editText4);
+        //edtFirst=(EditText)findViewById(R.id.editText);
+        //edtPhone=(EditText)findViewById(R.id.editText5);
+       // edtPass=(EditText)findViewById(R.id.editText6);
+       // edtConfPass=(EditText)findViewById(R.id.editText7);
+       // edtEmail=(EditText)findViewById(R.id.editText4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final EditText etname = (EditText) findViewById(R.id.name);
@@ -53,61 +53,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
-<<<<<<< HEAD
 
-
-        final Button button1 = (Button) findViewById(R.id.button1);
-        button1.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v)
-            {
-                String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
-                if((edtFirst.getText().toString().length()==0) || (edtPhone.getText().toString().length()==0) ||
-                        (edtEmail.getText().toString().length()==0) || (edtPass.getText().toString().length()==0)
-                        || (edtConfPass.getText().toString().length()==0) )
-
-                {
-                    Toast.makeText(getApplicationContext(), "Enter all the fields", Toast.LENGTH_LONG).show();
-
-                    //edtFirst.setError("Enter all the fields ");
-                    //edtFirst.requestFocus();
-                  //  Register.this.finish();
-
-                }
-             /*   if(edtFirst.getText().toString().length()==0){
-                    edtFirst.setError("First name not entered");
-                    edtFirst.requestFocus();
-                }
-                if(edtPhone.getText().toString().length()==0){
-                    edtPhone.setError("Phone number not entered");
-                    edtPhone.requestFocus();
-                }
-                if(edtEmail.getText().toString().length()==0){
-                    edtPhone.setError("Email not entered");
-                    edtPhone.requestFocus();
-                }
-
-                if(edtPass.getText().toString().length()==0){
-                    edtPass.setError("Password not entered");
-                    edtPass.requestFocus();
-                }
-                if(edtConfPass.getText().toString().length()==0){
-                    edtConfPass.setError("Please confirm password");
-                    edtPhone.requestFocus();
-                }
-                */
-                else if(!edtEmail.getText().toString().trim().matches(emailPattern) ){
-                    edtPass.setError("Enter a valid email id");
-                    edtPass.requestFocus();
-                    // Register.this.finish();
-
-                }
-                else if(edtPhone.getText().toString().length() != 10){
-                    edtPhone.setError("Enter a valid phone number");
-                    edtPhone.requestFocus();
-                    // Register.this.finish();
-
-                }
-=======
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,6 +62,7 @@ public class Register extends AppCompatActivity {
                 final String email = etemail.getText().toString();
                 final String mobile = etmobile.getText().toString();
                 final String password = etpassword.getText().toString();
+                final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -123,10 +70,66 @@ public class Register extends AppCompatActivity {
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
+
                             if (success) {
-                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                                startActivity(intent);
-                            } else {
+
+                                if((name.length()==0) || (mobile.length()==0) || (email.length()==0) || (password.length()==0))
+
+                                {
+                                    Toast.makeText(getApplicationContext(), "Enter all the fields", Toast.LENGTH_LONG).show();
+
+                                    etname.setError("Enter all the fields ");
+                                    etname.requestFocus();
+                                    //Register.this.finish();
+                                    //startActivity(new Intent(Register.this,Register.class));
+
+                                }
+
+                                else if(!email.trim().matches(emailPattern) ){
+                                    etemail.setError("Enter a valid email id");
+                                    etemail.requestFocus();
+                                    //startActivity(new Intent(Register.this,Register.class));
+                                    // Register.this.finish();
+
+                                }
+                                else if(mobile.length() != 10){
+                                    etmobile.setError("Enter a valid phone number");
+                                    etmobile.requestFocus();
+                                   // startActivity(new Intent(Register.this,Register.class));
+                                    // Register.this.finish();
+
+                                }
+                                else if(password.length() < 8 ){
+                                    etpassword.setError("Password should be atleast of 8 charactors");
+                                    etpassword.requestFocus();
+                                   // startActivity(new Intent(Register.this,Register.class));
+                                    //Register.this.finish();
+
+                                }
+
+
+                                else {
+                                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+
+                                    //Intent i1=new Intent(getBaseContext(),Success_registeration.class);
+                                    //startActivity(i1);
+
+                                    //Remove activity
+
+                                    // finish();
+                                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                    startActivity(intent);
+                                    finish();
+
+
+                                }
+
+
+
+
+                            }
+
+                            else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                                 builder.setMessage("Register Failed")
                                         .setNegativeButton("Retry", null)
@@ -143,43 +146,15 @@ public class Register extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(Register.this);
                 queue.add(registerRequest);
 
->>>>>>> 943b02455de56c462ae43971f07130bd9b39321c
-
-                else if(edtPass.getText().toString().length() < 8 ){
-                    edtPass.setError("Password should be atleast of 8 charactors");
-                    edtPass.requestFocus();
-                   // Register.this.finish();
-
-                }
-                else if(!edtPass.getText().toString().equals(edtConfPass.getText().toString())){
-                    edtConfPass.setError("Password Not matched");
-                    edtConfPass.requestFocus();
-                   // Register.this.finish();
-                }
-
-                else {
-                Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
-                Intent i1=new Intent(getBaseContext(),Success_registeration.class);
-                startActivity(i1);
-
-                //Remove activity
-<<<<<<< HEAD
                 finish();
 
             }
-        }
 
-=======
-               finish();
-
-            }
->>>>>>> 943b02455de56c462ae43971f07130bd9b39321c
         });
     }
-<<<<<<< HEAD
 
 
 }
-=======
-}
->>>>>>> 943b02455de56c462ae43971f07130bd9b39321c
+
+
+
