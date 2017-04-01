@@ -38,5 +38,13 @@
     <string name="title_activity_add_new2">AddNew2</string>
     <string name="title_activity_learn">Learn</string>
     <string name="title_activity_product_details">Product_details</string>
-    >>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
+    <string name="title_activity_productdetails">Productdetails</string>
+    <string-array name="names">
+      <item>laptop</item>
+    <item>Desktops</item>
+    <item>servers</item>
+    <item>crt</item>
+    <item>refrigerator</item>
+    </string-array>
+
 </resources>

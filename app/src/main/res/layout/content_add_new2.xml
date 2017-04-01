@@ -8,11 +8,11 @@
     tools:context="com.example.root.hackathon.AddNew2"
     tools:showIn="@layout/activity_add_new2">
 
-    <TextView
-        android:id="@+id/textView19"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="27dp"
-        tools:layout_editor_absoluteY="64dp" />
+    <com.weiwangcn.betterspinner.library.material.MaterialBetterSpinner
+        android:id="@+id/materialspinner"
+        android:layout_width="304dp"
+        android:layout_height="480dp"
+        android:hint="Select Devices"
+        tools:layout_editor_absoluteY="1dp"
+        tools:layout_editor_absoluteX="10dp" />
 </android.support.constraint.ConstraintLayout>

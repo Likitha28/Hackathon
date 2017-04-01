@@ -80,10 +80,6 @@
             android:name=".Learn"
             android:label="@string/title_activity_learn"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".Product_details"
-            android:label="@string/title_activity_product_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

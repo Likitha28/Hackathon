@@ -1,34 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.root.hackathon.Addactivity">
+    tools:openDrawer="start">
 
-    <android.support.design.widget.AppBarLayout
+
+
+    <RelativeLayout
+        android:id="@+id/add_activity_rlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+        <TextView
+            android:id="@+id/add_activity_type_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type: "
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_alignBottom="@+id/add_activity_type_field"
+            android:layout_alignRight="@+id/add_activity_count_label"
+            android:layout_alignEnd="@+id/add_activity_count_label"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <EditText
+            android:id="@+id/add_activity_type_field"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spinner"
+            android:layout_alignLeft="@+id/add_activity_count_field"
+            android:layout_alignStart="@+id/add_activity_count_field" />
+
+        <TextView
+            android:id="@+id/add_activity_count_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/add_activity_type_label"
+            android:layout_marginTop="20dp"
+            android:text="Count: "
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/add_activity_count_field"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_alignTop="@+id/add_activity_count_label"
+            android:layout_alignLeft="@+id/add_activity_submitbt"
+            android:layout_alignStart="@+id/add_activity_submitbt" />
+
+
+        <Button
+            android:id="@+id/add_activity_submitbt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="36dp"
+            android:text="Add"
+            android:layout_below="@+id/add_activity_count_field"
+            android:layout_centerHorizontal="true" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/request_recycler_view"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="match_parent"
 
-    </android.support.design.widget.AppBarLayout>
+            android:layout_below="@+id/add_activity_submitbt"
+            android:layout_marginTop="20dp"
+            android:scrollbars="vertical" />
 
-    <include layout="@layout/content_addactivity" />
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:visibility="visible" />
+    </RelativeLayout>
 
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
-</android.support.design.widget.CoordinatorLayout>
+
+</android.support.v4.widget.DrawerLayout>
