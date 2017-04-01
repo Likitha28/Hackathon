@@ -23,11 +23,18 @@ import com.android.volley.toolbox.Volley;
 import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
-
+    EditText edtFirst,edtPhone, edtPass, edtConfPass, edtEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
+
+
+        //edtFirst=(EditText)findViewById(R.id.editText);
+        //edtPhone=(EditText)findViewById(R.id.editText5);
+       // edtPass=(EditText)findViewById(R.id.editText6);
+       // edtConfPass=(EditText)findViewById(R.id.editText7);
+       // edtEmail=(EditText)findViewById(R.id.editText4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         final EditText etname = (EditText) findViewById(R.id.name);
@@ -46,6 +53,7 @@ public class Register extends AppCompatActivity {
             }
         });
 
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,6 +62,7 @@ public class Register extends AppCompatActivity {
                 final String email = etemail.getText().toString();
                 final String mobile = etmobile.getText().toString();
                 final String password = etpassword.getText().toString();
+                final String emailPattern = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -61,10 +70,66 @@ public class Register extends AppCompatActivity {
                         try {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
+
                             if (success) {
-                                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-                                startActivity(intent);
-                            } else {
+
+                                if((name.length()==0) || (mobile.length()==0) || (email.length()==0) || (password.length()==0))
+
+                                {
+                                    Toast.makeText(getApplicationContext(), "Enter all the fields", Toast.LENGTH_LONG).show();
+
+                                    etname.setError("Enter all the fields ");
+                                    etname.requestFocus();
+                                    //Register.this.finish();
+                                    //startActivity(new Intent(Register.this,Register.class));
+
+                                }
+
+                                else if(!email.trim().matches(emailPattern) ){
+                                    etemail.setError("Enter a valid email id");
+                                    etemail.requestFocus();
+                                    //startActivity(new Intent(Register.this,Register.class));
+                                    // Register.this.finish();
+
+                                }
+                                else if(mobile.length() != 10){
+                                    etmobile.setError("Enter a valid phone number");
+                                    etmobile.requestFocus();
+                                   // startActivity(new Intent(Register.this,Register.class));
+                                    // Register.this.finish();
+
+                                }
+                                else if(password.length() < 8 ){
+                                    etpassword.setError("Password should be atleast of 8 charactors");
+                                    etpassword.requestFocus();
+                                   // startActivity(new Intent(Register.this,Register.class));
+                                    //Register.this.finish();
+
+                                }
+
+
+                                else {
+                                    Toast.makeText(getApplicationContext(), "Success", Toast.LENGTH_LONG).show();
+
+                                    //Intent i1=new Intent(getBaseContext(),Success_registeration.class);
+                                    //startActivity(i1);
+
+                                    //Remove activity
+
+                                    // finish();
+                                    Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                                    startActivity(intent);
+                                    finish();
+
+
+                                }
+
+
+
+
+                            }
+
+                            else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(Register.this);
                                 builder.setMessage("Register Failed")
                                         .setNegativeButton("Retry", null)
@@ -81,14 +146,15 @@ public class Register extends AppCompatActivity {
                 RequestQueue queue = Volley.newRequestQueue(Register.this);
                 queue.add(registerRequest);
 
-
-                Intent i1=new Intent(getBaseContext(),Success_registeration.class);
-                startActivity(i1);
-
-                //Remove activity
-               finish();
+                finish();
 
             }
+
         });
     }
+
+
 }
+
+
+

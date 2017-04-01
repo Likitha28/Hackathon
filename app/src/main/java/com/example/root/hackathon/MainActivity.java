@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_request) {
 
 
-            Intent i1=new Intent(getBaseContext(),Addactivity.class);
+            Intent i1=new Intent(getBaseContext(),AddNew.class);
             startActivity(i1);
 
             //Remove activity
