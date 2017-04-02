@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.Recycler"
+    tools:showIn="@layout/activity_recycler">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="480dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+    <TextView
+        android:id="@+id/textView44"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(1) shall ensure that the facility and recycling processes are in accordance with the standards or guidelines prescribed by the Central Pollution Control Board from time to time;
+(2) obtain authorisation from concerned State Pollution Control Board in accordance with the procedure under the sub-rule (3) of rule 13;
+(3) ensure that no damage is caused to the environment during storage and transportation of e-waste
+(4) ensure that the recycling processes do not have any adverse effect on the health and the environment
+(5) make available all records to the Central Pollution Control Board or the concerned State Pollution Control Board for inspection;
+(6) ensure that the fractions or material not recycled in its facility is sent to the respective authorised recyclers
+(7) ensure that residue generated during recycling process is disposed of in an authorised treatment storage disposal facility;
+(8) maintain record of e-waste collected, dismantled, recycled and sent to authorised recycler in Form-2 and make such record available for scrutiny by the Central Pollution Control Board or the concerned State Pollution Control Board;
+(9) file annual returns in Form-3, to the concerned State Pollution Control Board as the case may be, on or before 30th day of June following the financial year to which that return relates;
+(10)may accept waste electrical and electronic equipment or components not listed in Schedule I for recycling provided that they do not contain any radioactive material and same shall be indicated while taking the authorisation from concerned State Pollution Control Board
+(11)operation without Authorisation by any recycler, as defined in this rule, shall be
+considered as causing damage to the environment.
+
+"
+        />
+
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

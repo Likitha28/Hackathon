@@ -10,7 +10,7 @@ public class ProductData {
     private String type;
     private String count;
 
-    public ProductData(String name, String type, String count) {
+    public ProductData( String type, String count) {
         this.name = name;
         this.type = type;
         this.count = count;

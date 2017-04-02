@@ -7,10 +7,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:openDrawer="start">
-
-
-
+    tools:openDrawer="start"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <RelativeLayout
         android:id="@+id/add_activity_rlayout"
         android:layout_width="match_parent"
@@ -21,72 +22,90 @@
             android:id="@+id/add_activity_type_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Type: "
-            android:textSize="18sp"
-            android:layout_marginTop="20dp"
-            android:layout_alignBottom="@+id/add_activity_type_field"
-            android:layout_alignRight="@+id/add_activity_count_label"
             android:layout_alignEnd="@+id/add_activity_count_label"
             android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/add_activity_count_label"
+            android:layout_marginTop="20dp"
 
-        <EditText
-            android:id="@+id/add_activity_type_field"
-            android:layout_width="170dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/spinner"
-            android:layout_alignLeft="@+id/add_activity_count_field"
-            android:layout_alignStart="@+id/add_activity_count_field" />
+            android:textSize="18sp" />
 
         <TextView
             android:id="@+id/add_activity_count_label"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/add_activity_type_label"
-            android:layout_marginTop="20dp"
             android:text="Count: "
-            android:textSize="18sp" />
+            android:textSize="20dp"
+            android:layout_below="@+id/add_activity_type_label"
+            android:layout_alignBottom="@+id/add_activity_count_field"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <EditText
             android:id="@+id/add_activity_count_field"
             android:layout_width="170dp"
             android:layout_height="wrap_content"
             android:inputType="number"
-            android:layout_alignTop="@+id/add_activity_count_label"
-            android:layout_alignLeft="@+id/add_activity_submitbt"
-            android:layout_alignStart="@+id/add_activity_submitbt" />
+            android:layout_below="@+id/add_activity_type_label"
+            android:layout_toRightOf="@+id/add_activity_submitbt"
+            android:layout_toEndOf="@+id/add_activity_submitbt" />
 
 
         <Button
             android:id="@+id/add_activity_submitbt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:layout_marginTop="36dp"
+            android:background="@color/colorPrimary"
             android:text="Add"
-            android:layout_below="@+id/add_activity_count_field"
-            android:layout_centerHorizontal="true" />
-
+            android:textColor="@color/white"
+            android:layout_marginTop="33dp"
+            android:layout_below="@+id/spinner"
+            android:layout_toRightOf="@+id/textView17"
+            android:layout_toEndOf="@+id/textView17" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/request_recycler_view"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-
             android:layout_below="@+id/add_activity_submitbt"
             android:layout_marginTop="20dp"
             android:scrollbars="vertical" />
+
+
+        <Button
+            android:id="@+id/confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm"
+            android:textColor="@color/white"
+            android:background="@color/colorPrimary"
+            android:layout_above="@+id/request_recycler_view"
+            android:layout_alignRight="@+id/add_activity_count_field"
+            android:layout_alignEnd="@+id/add_activity_count_field" />
 
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="54dp"
+
+            android:layout_below="@+id/add_activity_type_label"
+            android:layout_alignLeft="@+id/add_activity_count_field"
+            android:layout_alignStart="@+id/add_activity_count_field" />
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:visibility="visible" />
+            android:layout_below="@+id/add_activity_count_label"
+            android:textSize="20dp"
+            android:text="Type"
+            android:layout_above="@+id/add_activity_submitbt" />
     </RelativeLayout>
 
+    </ScrollView>
 
 
 </android.support.v4.widget.DrawerLayout>

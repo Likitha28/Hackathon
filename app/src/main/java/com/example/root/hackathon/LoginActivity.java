@@ -38,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        sp = getSharedPreferences("login", MODE_PRIVATE);
+        sp = getApplicationContext().getSharedPreferences("login",0 );
         final EditText etUsername = (EditText) findViewById(R.id.email);
         final EditText etPassword = (EditText) findViewById(R.id.password);
         final Button login = (Button) findViewById(R.id.login);
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
 
                                 loginCheck(user_id);
                                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                                intent.putExtra("name", name);
+                               intent.putExtra("name", name);
                                 startActivity(intent);
 
                                 //LoginActivity.this.startActivity(intent);

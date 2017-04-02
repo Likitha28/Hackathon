@@ -13,11 +13,39 @@
     tools:context="com.example.root.hackathon.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
-    <TextView
-        android:id="@+id/name"
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/user_icon"
+        android:id="@+id/imageView2"
+        android:layout_below="@+id/textView48"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="50dp" />
+    <TextView
+        android:id="@+id/textView47"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_marginTop="41dp"
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:text="E-rase your E-Waste! "
+        android:textColor="@color/red1"
+        android:layout_below="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView48"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="29dp" />
+        android:textAlignment="center"
+        android:textSize="25dp"
+        android:textColor="@color/firoza"
+android:text="E-SWACHATA " />
+
 </RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.Responsibiltyofproducer"
+    tools:showIn="@layout/activity_responsibiltyofproducer">
+
+    <ScrollView
+        android:layout_width="304dp"
+        android:layout_height="480dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <TextView
+            android:id="@+id/textView20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" The producer of electrical and electronic equipment listed in Schedule I shall be responsible for -
+(1) implementing the Extended Producers Responsibility with the following frameworks, namely:-
+(a) collection and channelisation of e-waste generated from the ‘end-of-life’ of their products or ‘end-of-life’ products with same electrical and electronic equipment code and historical waste available on the date from which these rules come into force as per Schedule I in line with the targets prescribed in Schedule III in Extended Producer Responsibility - Authorisation;
+(b) the mechanism used for channelisation of e-waste from ‘end-of-life’ products including those from their service centres to authorised dismantler or recycler shall be in accordance with the Extended Producer Responsibility - Authorisation. In cases of fluorescent and other mercury containing lamps, where recyclers are not available, channelisation may be from collection centre to Treatment, Storage and Disposal Facility
+(c) for disposal in Treatment, Storage and Disposal Facility, a pre-treatment is necessary to immobilise the mercury and reduce the volume of waste to be disposed off
+(d) Extended Producer Responsibility - Authorisation should comprise of general scheme for collection of waste Electrical and Electronic Equipment from the Electrical and Electronic Equipment placed on the market earlier, such as through dealer, collection centres, Producer Responsibility Organisation, through buy-back arrangement, exchange scheme, Deposit Refund System, etc. whether directly or through any authorised agency and channelising the items so collected to authorised recyclers;
+(e) providing contact details such as address, e-mail address, toll-free telephone numbers or helpline numbers to consumer(s) or bulk consumer(s) through their website and product user documentation so as to facilitate return of end-of-life electrical and electronic equipment;
+creating awareness through media, publications, advertisements, posters, or by any other means of communication and product user documentation accompanying the equipment, with regard to -6
+(i) information on address, e-mail address, toll-free telephone numbers or helpline numbers and web site;
+(ii) information on hazardous constituents as specified in sub-rule 1 of rule 16 in electrical and electronic equipment;
+(iii) information on hazards of improper handling, disposal, accidental breakage, damage or improper recycling of e-waste;
+(iv) instructions for handling and disposal of the equipment after its use, along with the Do’s and Don’ts;
+(v) affixing a visible, legible and indelible symbol given below on the products or product user documentation to prevent e-waste from being dropped in garbage bins containing waste destined for disposal;
+" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.Dealer"
+    tools:showIn="@layout/activity_dealer">
+<ScrollView
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp">
+    <TextView
+        android:id="@+id/textView43"
+        android:layout_width="319dp"
+        android:layout_height="40dp"
+        android:text="(1) in the case the dealer has been given the responsibility of collection on behalf of the producer, the dealer shall collect the ewaste by providing the consumer a box, bin or a demarcated area to deposit ewaste, or through take back system and send the e-waste so collected to collection centre or dismantler or recycler as designated by producer;
+(2) the dealer or retailer or e-retailer shall refund the amount as per take back system or Deposit Refund Scheme of the producer to the depositor of e-waste;
+(3) every dealer shall ensure that the e-waste thus generated is safely transported to authorised dismantlers or recyclers;
+(4) ensure that no damage is caused to the environment during storage and transportation of e-waste.
+"
+       />
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

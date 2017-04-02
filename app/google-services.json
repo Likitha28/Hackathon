@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "859057465087",
+    "firebase_url": "https://user-4bbca.firebaseio.com",
+    "project_id": "user-4bbca",
+    "storage_bucket": "user-4bbca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859057465087:android:93d27d6cc4397a22",
+        "android_client_info": {
+          "package_name": "com.example.root.hackathon"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859057465087-n9o3ne2oe9b203krts7e987e5pkg4osl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfdi4pRmUd5C7r59erlWGJTc4YSzwt3l0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

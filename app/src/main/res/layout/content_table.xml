@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.table"
+    tools:showIn="@layout/activity_table">
+
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                >
+
+
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    >
+
+                    <TextView
+                        android:text="Substance"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_column="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Risk"
+                        android:textStyle="bold"
+                        android:textSize="20dp"
+                        android:layout_column="2" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Short Chain Chloro Paraffins,Alkanes, C10-13"
+                        android:layout_gravity="center"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="Very toxic to aquatic organisms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Antimony trioxide"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="Limited evidence of a carcinogenic effect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Beryllium metal"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="Very toxic on inhalation. It may cause cancer by inhalation. Beryllium component scrap is classified as nonhazardous in the OECD, Basel and EU regime. However, it is
+recommended that beryllium metal components should be segregated from equipment at end-of-life and returned to the supplier for recycling"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text=" Beryllium oxide (Beryllia)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="Very toxic by inhalation. It may cause cancer "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Cadmium"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="Very toxic by inhalation. It may cause cancer  . Harmful to aquatic organisms"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Cadmium oxide"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="May cause cancer by inhalation. Danger of serious damage to health by prolonged exposure .Harmful if swallowed" />
+
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Cadmium sulphide"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Limited evidence of a carcinogenic effect . Toxic by inhalation. Danger of serious damage to health by prolonged exposure It may cause long term effects in the aquatic environment" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Chromium VI"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:text="May cause cancer by inhalation. Danger of serious damage to health by prolonged exposure Harmful if swallowed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Copper beryllium alloys"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Components in end-of-life electrical equipment can be recycled as part of the general copper recycle stream. There is generally no need
+for component extraction prior to equipment recycling.Toxic by inhalation" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Decabromodiphenylether (DBDE)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Potential for forming brominated dibenzodioxins or furans (PBDD/F) in uncontrolled thermal processes, and possibility that higher PBDEs could debrominate to form the tetra
+ and penta BDEs found in marine environment food chain" />
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Lead"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Lead oxide"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="May cause harm to the unborn child .Harmful by inhalation/harmful if swallowed" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Liquid Crystals"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Press articles claiming that LCDs contain carcinogenic azo-dyes. More current articles talk about hazardous ingredients. Toxicological
+studies on a large number of single liquid crystals have been performed according to OECD Guidelines and EU regulation. SO far no indications of carcinogenic potential and acute oral
+oxicity have been found." />
+                </TableRow>
+
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Mercury"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Very toxic to aquatic organisms and may cause long term effects in the aquatic environment. Effects in humans are mainly affecting the central nervous system effects (CNS) as well as the kidney.Toxic by inhalation " />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Mineral wool"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Irrigating to the skin" />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Octabromodiphenylether(OBDE)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Possible risk of harm to the unborn child" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Polychlorobiphenyls"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Possible risk of harm to the unborn child" />
+                </TableRow>
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Polyvinyl chloride (PVC)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="May cause long term effects in the aquatic environment" />
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text=" Refractory Ceramic Fibers"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="As with any material containing chlorine, potential for forming dioxins and furans in case of uncontrolled burning. Liberation of HCL gas during combustion" />
+                </TableRow>
+
+
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Tetrabromobisphenol-A (TBBPA)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="May cause cancer by inhalation. Irritating to the skin" />
+                </TableRow>
+                <TableRow
+                    android:background="@drawable/border1">
+
+                    <TextView
+                        android:text="Tetrabromobisphenol-A (LEAD)"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_column="1" />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_column="1"
+                        android:text="Processing of metallic lead may give rise to lead compounds, which are all, classified as dangerous substances. The land filling of WEEE has given rise
+                    concerns over possible leaching of lead into the environment" />
+                </TableRow>
+
+
+
+
+            </TableLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+ </android.support.constraint.ConstraintLayout>

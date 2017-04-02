@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.MainHazard"
+    tools:showIn="@layout/activity_main_hazard">
+
+    <Button
+        android:id="@+id/health"
+        android:layout_width="304dp"
+        android:layout_height="56dp"
+        android:text="Health Hazards"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="100dp"
+        android:background="@color/red"
+        android:layout_marginBottom="41dp"
+        android:layout_above="@+id/calculator"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/calculator"
+        android:layout_width="304dp"
+        android:layout_height="56dp"
+        android:text="Hazard Calculator"
+        android:background="@color/firoza"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="184dp"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/health"
+        android:layout_alignStart="@+id/health" />
+</RelativeLayout>

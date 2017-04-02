@@ -75,7 +75,7 @@ public class Register extends AppCompatActivity {
 
                                 if((name.length()==0) || (mobile.length()==0) || (email.length()==0) || (password.length()==0))
 
-                                {
+                               {
                                     Toast.makeText(getApplicationContext(), "Enter all the fields", Toast.LENGTH_LONG).show();
 
                                     etname.setError("Enter all the fields ");

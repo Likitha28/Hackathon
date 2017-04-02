@@ -12,7 +12,9 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.example.root.hackathon.Register"
     tools:showIn="@layout/activity_register">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -112,4 +114,5 @@
         android:layout_alignTop="@+id/textView5"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+</ScrollView>
 </RelativeLayout>

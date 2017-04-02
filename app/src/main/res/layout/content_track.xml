@@ -32,4 +32,5 @@
         android:layout_alignParentBottom="true"
         android:layout_alignLeft="@+id/Order_Details"
         android:layout_alignStart="@+id/Order_Details" />
+
 </RelativeLayout>

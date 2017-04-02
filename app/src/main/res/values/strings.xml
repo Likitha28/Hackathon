@@ -40,11 +40,24 @@
     <string name="title_activity_product_details">Product_details</string>
     <string name="title_activity_productdetails">Productdetails</string>
     <string-array name="names">
-      <item>laptop</item>
-    <item>Desktops</item>
-    <item>servers</item>
-    <item>crt</item>
-    <item>refrigerator</item>
+        <item>Laptop</item>
+        <item>Desktops</item>
+        <item>Servers</item>
+        <item>Battery</item>
+        <item>Refrigerator</item>
+        <item>Mobiles</item>
+        <item>Printers</item>
     </string-array>
+    <string name="title_activity_notification">Notification</string>
+    <string name="title_activity_recevie">Recevie</string>
+    <string name="title_activity_main_hazard">MainHazard</string>
+    <string name="title_activity_table">table</string>
+    <string name="title_activity_definitions">Definitions</string>
+    <string name="title_activity_responsibiltyof_collector">ResponsibiltyofCollector</string>
+    <string name="title_activity_responsibiltyofproducer">Responsibiltyofproducer</string>
+    <string name="title_activity_collectioncenter">Collectioncenter</string>
+    <string name="title_activity_manufacturer">Manufacturer</string>
+    <string name="title_activity_dealer">Dealer</string>
+    <string name="title_activity_recycler">Recycler</string>
 
 </resources>

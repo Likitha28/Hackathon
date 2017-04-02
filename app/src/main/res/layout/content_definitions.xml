@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.Definitions"
+    tools:showIn="@layout/activity_definitions">
+<ScrollView
+    android:layout_width="304dp"
+    android:layout_height="480dp"
+    tools:layout_editor_absoluteY="8dp"
+    tools:layout_editor_absoluteX="8dp">
+
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="(a) 'Act' means the Environment (Protection) Act, 1986 (29 of 1986)
+ (b)'authorisation' means permission for generation, handling, collection, reception,storage, transportation, refurbishing, dismantling, recycling, treatment and disposal of e-waste, granted to manufacturer, dismantler, refurbisher and recycler
+ (c) 'bulk consumer' means bulk users of electrical and electronic equipment such as Central Government or State Government Departments, public sector undertakings, banks, educational institutions, multinational organisations,international agencies, partnership and public or private companies that are registered under the Factories Act, 1948 (63 of 1948) and the Companies Act,2013 (18 of 2013) and health care facilities which have turnover of more than one crore or have more than twenty employees
+ (d)'Central Pollution Control Board' means the Central Pollution Control Board constituted under sub-section (1) of section 3 of the Water (Prevention and Control of Pollution) Act, 1974 (6 of 1974)
+ (e) 'collection centre' means a centre or a collection point or both established by producer individually or as association jointly to collect e-waste for authorisation for Extended Producer Responsibility granted to the producer and including the collection centre established by the dismantler or refurbisher or Pollution Control Board where the facility exists;
+ (f) ‘component’ means one of the parts of a sub-assembly or assembly of which a manufactured product is made up and into which it may be resolved and includes an accessory or attachment to another component;
+ (g) ‘consumables’ means an item, which participates in or is required for a manufacturing process or for functioning of the electrical and electronic equipment and may or may not form part of end-product. Items, which are substantially or totally consumed during a manufacturing process, shall be deemed to be consumables;
+ (h) 'consumer' means any person using electrical and electronic equipment excluding the bulk consumers;
+ (i) ‘channelisation’ means to direct the path for movement of e-wastes from collection onwards to authorised dismantler or recycler. In case of fluorescent and other mercury containing lamps, where recyclers are not available, this means path for movement from collection centre to Treatment, Storage and Disposal Facility
+ (j) 'dealer' means any individual or firm that buys or receives electrical and electronic equipment as listed in Schedule I of these rules and their components or consumables or parts or spares from producers for sale
+ (k) ‘deposit refund scheme’ means a scheme whereby the producer charges an additional amount as a deposit at the time of sale of the electrical and electronic equipment and returns it to the consumer along with interest when the end-oflife electrical and electronic equipment is returned;
+ (l) 'dismantler' means any person or organisation engaged in dismantling of used electrical and electronic equipment into their components and having facilities
+
+      "  />
+
+
+
+
+
+
+
+
+</ScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -39,12 +39,12 @@ public class Complete_profile extends AppCompatActivity {
 
         //final Button button1 = (Button) findViewById(R.id.button1);
 
-        final EditText etaddress = (EditText) findViewById(R.id.editText2);
-        final EditText etpincode = (EditText) findViewById(R.id.editText3);
-        final EditText etaccount = (EditText) findViewById(R.id.editText8);
-        final EditText etifsc = (EditText) findViewById(R.id.editText9);
-        final EditText etbankname = (EditText) findViewById(R.id.editText10);
-        final EditText etacountholdername = (EditText) findViewById(R.id.editText12);
+        final EditText etaddress = (EditText) findViewById(R.id.editText11);
+        final EditText etpincode = (EditText) findViewById(R.id.editText12);
+        final EditText etaccount = (EditText) findViewById(R.id.editText13);
+        final EditText etifsc = (EditText) findViewById(R.id.editText17);
+        final EditText etbankname = (EditText) findViewById(R.id.editText18);
+        final EditText etacountholdername = (EditText) findViewById(R.id.editText19);
 
         final Button button1 = (Button) findViewById(R.id.save);
         button1.setOnClickListener(new View.OnClickListener() {

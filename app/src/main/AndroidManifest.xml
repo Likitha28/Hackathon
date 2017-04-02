@@ -10,7 +10,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/user_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -70,7 +70,6 @@
             android:name=".Graph"
             android:label="@string/title_activity_graph"
             android:theme="@style/AppTheme.NoActionBar" />
-        >>>>>>> 0ff3924df948826e0bf119057882c043684f42c5
         <activity android:name=".AddNew" />
         <activity
             android:name=".AddNew2"
@@ -80,6 +79,55 @@
             android:name=".Learn"
             android:label="@string/title_activity_learn"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Notification"
+            android:label="@string/title_activity_notification"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name=".Notificationrec" />
+
+        <activity
+            android:name=".Recevie"
+            android:label="@string/title_activity_recevie"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MainHazard"
+            android:label="@string/title_activity_main_hazard"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".table"
+            android:label="@string/title_activity_table"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Definitions"
+            android:label="@string/title_activity_definitions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ResponsibiltyofCollector"
+            android:label="@string/title_activity_responsibiltyof_collector"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Responsibiltyofproducer"
+            android:label="@string/title_activity_responsibiltyofproducer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Collectioncenter"
+            android:label="@string/title_activity_collectioncenter"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Manufacturer"
+            android:label="@string/title_activity_manufacturer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Dealer"
+            android:label="@string/title_activity_dealer"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Recycler"
+            android:label="@string/title_activity_recycler"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <!-- Firebase Notifications -->
+        <!-- ./Firebase Notifications -->
     </application>
 
 </manifest>

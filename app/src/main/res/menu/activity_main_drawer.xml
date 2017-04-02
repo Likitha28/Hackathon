@@ -5,28 +5,51 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_request"
-            android:title="New Request" />
+            android:title="New Request"
+            android:icon="@drawable/pluscircle"
+
+            />
         <item
             android:title="Track product"
-            android:id="@+id/nav_track" />
+            android:id="@+id/nav_track"
+            android:icon="@drawable/mapmarkermultiple"
+            />
         <item
             android:id="@+id/nav_hazards"
-            android:title="Hazards" />
+            android:title="Hazards"
+            android:icon="@drawable/healthhazards"
+
+
+            />
         <item
             android:id="@+id/nav_learn"
-            android:title="Learn" />
+            android:title="Learn"
+            android:icon="@drawable/bookopenvariant"
+
+            />
         <item
             android:id="@+id/nav_notification"
-            android:title="Notifications" />
+            android:title="Notifications"
+            android:icon="@drawable/bullhorn"
+
+            />
         <item
             android:id="@+id/nav_profile"
-            android:title="My Profile" />
+            android:title="My Profile"
+            android:icon="@drawable/account"
+
+            />
         <item
             android:id="@+id/nav_help"
-            android:title="Help Center" />
+            android:title="Help Center"
+            android:icon="@drawable/helpcentre"
+            />
+
         <item
             android:id="@+id/nav_legal"
-            android:title="Legal" />
+            android:title="Legal"
+            android:icon="@drawable/legal"
+            />
     </group>
 
     <item android:title="Communication"

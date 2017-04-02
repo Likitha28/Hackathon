@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.Collectioncenter"
+    tools:showIn="@layout/activity_collectioncenter">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/textView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" (1) collect e-waste generated during the process of refurbishing and channelise the waste to authorised dismantler or recycler through its collection centre;
+(2) make an application in Form 1(a) in accordance with the procedure laid down in sub-rule (4) of rule 13 to the concerned State Pollution Control Board for grant of one time authorisation;
+(a) the concerned State Pollution Control Board shall authorise the Refurbisher on one time basis as per Form 1 (bb) and authorisation would be deemed as considered if not objected to within a period of thirty days;
+(b) the authorised Refurbisher shall be required to submit details of e-waste generated to the concerned State Pollution Control Board on yearly basis;
+(3) ensure that no damage is caused to the environment during storage and transportation of e-waste;
+(4) ensure that the refurbishing process do not have any adverse effect on the health and the environment;8
+(5) ensure that the e-waste thus generated is safely transported to authorised collection centres or dismantlers or recyclers;
+(6) file annual returns in Form-3 to the concerned State Pollution Control Board, on or before the 30th day of June following the financial year to which that return relates;
+(7) maintain records of the e-waste handled in Form-2 and such records should be available for scrutiny by the appropriate authority."
+       />
+</ScrollView>
+</android.support.constraint.ConstraintLayout>

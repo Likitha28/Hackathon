@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.root.hackathon.ResponsibiltyofCollector"
+    tools:showIn="@layout/activity_responsibiltyof_collector">
+
+    <ScrollView
+        android:layout_width="304dp"
+        android:layout_height="480dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="(1) collect e-waste generated during the manufacture of any electrical and electronic equipment and channelise it for recycling or disposal
+(2) apply for an authorisation in Form 1 (a) in accordance with the procedure prescribed under sub-rule (2) of rule 13 from the concerned State Pollution Control Board, which shall give the authorisation in accordance with Form 1 (bb)
+(3) ensure that no damage is caused to the environment during storage and transportation of e-waste
+(4) maintain records of the e-waste generated, handled and disposed in Form-2 and make such records available for scrutiny by the concerned State Pollution Control Board
+(5) file annual returns in Form-3, to the concerned State Pollution Control Board on or before the 30th day of June following the financial year to which that return relates.
+" />
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

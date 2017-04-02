@@ -60,8 +60,8 @@ public class AddNew extends AppCompatActivity implements NavigationView.OnNaviga
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+      //  NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+      //  navigationView.setNavigationItemSelectedListener(this);
 
 
         initialize();
